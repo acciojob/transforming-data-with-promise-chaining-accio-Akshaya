@@ -15,6 +15,20 @@ document.getElementById("btn").addEventListener("click", function(){
 			resolve(multiplied);
 		},1000);
 	}))
+	.then(num => new Promise((resolve) => {
+        setTimeout(() => {
+            const subtracted = num - 3;
+            outputDiv.textContent = `Result: ${subtracted}`;
+            resolve(subtracted);
+        }, 1000);
+    }))
+    .then(num => new Promise((resolve) => {
+        setTimeout(() => {
+            const divided = num / 2;
+            outputDiv.textContent = `Result: ${divided}`;
+            resolve(divided);
+        }, 1000);
+    }))
     .then(num => new promise ((resolve) =>{
 		setTimeout(()=>{
 			const add = num+10;
